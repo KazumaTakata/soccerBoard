@@ -1,0 +1,20 @@
+<%= render :partial => "header" %>
+
+<div class="createNewThread">
+<a class="newThread" href="/homes/new">create new thread</a>
+</div>
+<ul>
+<% if @home != nil %>
+<% @home.each do |home| %>
+    <li>
+      <div class="title">
+      <%= link_to home.title, "#{home_path(home)}/comments" %>
+      </div>
+      <div class="description">
+        <%= home.description %>
+      </div>
+    </li>
+    <hr />
+  <% end %>
+<% end %>
+</ul>

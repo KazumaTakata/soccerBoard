@@ -1,0 +1,49 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  background: green;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-size: 30px;
+   color: rgba(0, 0, 0, 0.66)
+}
+
+.innerContent{
+  margin: 20px;
+}
+
+.title{
+  font-size: 30px;
+  padding: 20px;
+}
+.createNewThread{
+  text-align: "center"
+}
+.newThread{
+  text-align: center;
+  display: block;
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  background-color: green;
+  color: white;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.newThread:hover{
+  background-color: rgba(100, 201, 56, 0.65)
+}

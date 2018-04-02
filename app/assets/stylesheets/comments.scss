@@ -1,0 +1,75 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type=text] {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  border-radius: 3px;
+font-size: 20px;
+}
+input[type=submit] {
+  display: inline-block;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  border-radius: 3px;
+  float:right;
+  background-color: green;
+  color: white;
+
+}
+
+.threadtitle{
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.nameTag{
+  width: 100px;
+  border-right: 1px solid black;
+  margin-right: 10px;
+}
+.commentTag{
+  width: 100px;
+  border-right: 1px solid black;
+  margin-right: 10px;
+
+}
+
+.name{
+  padding: 10px 0;
+  display: flex;
+}
+.comment{
+  padding: 10px 0;
+  display: flex;
+  font-size: 20px;
+  margin: 50px 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+textarea{
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+  border-radius: 3px;
+  font-size: 30px;
+}
+
+form {
+
+  margin: 30px;
+
+}

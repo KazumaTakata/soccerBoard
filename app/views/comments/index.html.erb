@@ -1,0 +1,35 @@
+<%= render :partial => "header" %>
+<div class="threadtitle">
+  <%= @home.title %>
+</div>
+<hr />
+<% if @comments != nil %>
+  <ul>
+  <% @comments.each do |comment| %>
+  <li>
+      <div>
+      <div class="name">
+      <div class="nameTag">
+        name
+      </div>
+      <%= comment.name %>
+      <%= comment.created_at.to_time %>
+      </div>
+      <div class="comment">
+        <div class="commentTag">comment</div>
+      <%= comment.comment %>
+      </div>
+      </div>
+  </li>
+    <hr />
+  <% end %>
+  </ul>
+<% end %>
+
+  <%= form_for @comment, url: {action: "create"}, method: "post" ,html: {class: "nifty_form"} do |f| %>
+    <label for="">name</label>
+    <%= f.text_field :name, class:"nameinput" %>
+    <label for="">Comment</label>
+    <%= f.text_area :comment, class:"commentArea" %>
+    <%= f.submit "Create" %>
+  <% end %>
