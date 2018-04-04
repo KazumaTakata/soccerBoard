@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def index
-
+    byebug
+    @login = !!User.find_by(id: session[:userId])
     @home = Home.find(params[:home_id])
     if @home.comments[0] != nil
       @comments = @home.comments.all
@@ -17,7 +18,8 @@ class CommentsController < ApplicationController
   def create
 
     @home = Home.find(params[:home_id])
-    @home.comments.create({name: params["comment"]["name"] , comment: params["comment"]["comment"]})
+    params["comment"]
+    @home.comments.create({name: params["comment"]["name"] , comment: params["comment"]["comment"], url: params["comment"]["url"].split("=")[1]})
 
     redirect_to home_comments_path
   end

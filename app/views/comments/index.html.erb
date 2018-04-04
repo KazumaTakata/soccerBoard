@@ -1,4 +1,6 @@
-<%= render :partial => "header" %>
+<%= render :partial => "layouts/header" %>
+
+<% if @login %>
 <div class="threadtitle">
   <%= @home.title %>
 </div>
@@ -19,6 +21,11 @@
         <div class="commentTag">comment</div>
       <%= comment.comment %>
       </div>
+      <div>
+        <% if comment.url != nil %>
+        <iframe width="560" height="315" src=<%= "https://www.youtube.com/embed/#{comment.url}" %> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <% end %>
+      </div>
       </div>
   </li>
     <hr />
@@ -31,5 +38,12 @@
     <%= f.text_field :name, class:"nameinput" %>
     <label for="">Comment</label>
     <%= f.text_area :comment, class:"commentArea" %>
+    <label for="">URL of YouTube</label>
+    <%= f.text_field :url, class:"nameinput" %>
     <%= f.submit "Create" %>
   <% end %>
+<% end %>
+
+<% if !@login %>
+  <p>Please login</p>
+<% end %>
